@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: #3a3d3d10;
+    padding: 20px;
+    border: 30px;
+    color: #161616;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    color: rgb(9, 32, 65); 
+    text-decoration: underline;
+}
+
+
+button{
+    margin-left: 50px;
+}
+
+.lista{
+    list-style: none;
+}
+

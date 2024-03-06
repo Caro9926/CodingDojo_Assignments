@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    
+    <a href="/nueva/receta" class="btn btn-info">Create</a>  <!--Add action-->
+    <a href="/logout" class="btn btn-info">Logout</a>  <!--Logout action-->
+    <h1 class="text-center">Welcome {{user.first_name}}!</h1>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Under 30 minutes?</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for receta in trecetas %}
+                <tr>
+                    <td>{{receta.name}}</td>
+                    {% if receta.time ==1 %}
+                    <td>Yes</td>
+                    {% else %}
+                    <td>No</td>
+                    {% endif %}
+                    <td>
+                        <a href="/receta/{{receta.id}}">View Instructions</a>
+                        {% if receta.user_id == session.user_id %}
+                        <a href="/editar/receta/{{receta.id}}">Edit</a>
+                        <a href="/receta/remover/{{receta.id}}">Delete</a> 
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</body>
+</html>

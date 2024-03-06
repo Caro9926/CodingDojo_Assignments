@@ -1,0 +1,76 @@
+USE esquema_libros; /* Utilizamos la base exportada del diagrama EER */
+
+
+/* Crea 5 autores diferentes */
+INSERT INTO autores (id, name, created_at, updated_at)
+VALUES(1, 'Jane Austen', "2022-01-26", "2022-01-26"),
+      (2, 'Emily Dickinson', "2022-01-26", "2022-01-26"),
+      (3, 'Fyodor Dostoevsky',"2022-01-26", "2022-01-26"),
+      (4, 'William Shakespeare',"2022-01-26", "2022-01-26"),
+      (5, 'Lau Tzu',"2022-01-26", "2022-01-26");
+
+/* Crea 5 libros */
+INSERT INTO libros (id, title, num_pages, created_at, updated_at)
+VALUES(1, 'C Sharp',25, "2022-01-26", "2022-01-26"),
+      (2, 'Java', 35,"2022-01-26", "2022-01-26"),
+      (3, 'Python',25,"2022-01-26", "2022-01-26"),
+      (4, 'PHP',85,"2022-01-26", "2022-01-26"),
+      (5, 'Ruby',90,"2022-01-26", "2022-01-26");
+
+/*Cambia el nombre de C Sharp */
+UPDATE libros SET title = 'C#' WHERE id = 1; 
+SELECT title FROM libros; 
+
+/*Cambia el nombdre del cuarto autor por Bill */
+UPDATE autores SET name = 'Bill' WHERE id = 4; 
+SELECT name FROM autores; 
+
+
+/*Selecciona los favoritos de los autores */
+INSERT INTO favoritos (id, autor_id, libro_id)
+VALUES(1, 1,1),
+      (2, 1,2),
+      (3,2,1), 
+      (4,2,2),
+      (5,2,3);
+INSERT INTO favoritos (id, autor_id, libro_id)
+VALUES (3,2,1),
+      (4,2,2),
+      (5,2,3); 
+
+INSERT INTO favoritos (id, autor_id, libro_id)
+VALUES (6,4,1),
+      (7,4,2),
+      (8,4,3),
+       (9,4,4),
+      (10,4,5); 
+
+
+/* Muestra a los autores que prefieren el libro 3*/
+SELECT * FROM libros
+JOIN favoritos on libros.id = favoritos.libro_id
+JOIN autores on autores.id = favoritos.autor_id
+WHERE libros.id = 3;
+
+
+/* Elimina el primer autor de los favoritos del segundo libro */
+DELETE FROM favoritos
+WHERE libro_id = 3 AND autor_id=2; 
+
+/*Agrega el quinto autor como otro que marcó como favorito el segundo libro */
+INSERT INTO favoritos (autor_id,libro_id)
+VALUES (5,2);
+
+/*Favoritos del tercer autor */
+
+SELECT * FROM autores
+JOIN favoritos ON autores.id = favoritos.autor_id
+JOIN libros ON libros.id = favoritos.libros_id
+WHERE autor.id = 3;
+
+/* Favoritos del quinto libro */
+SELECT * FROM autores
+JOIN favoritos ON autores.id = favoritos.autor_id
+JOIN libros ON libros.id = favoritos.libros_id
+WHERE libro_id = 5;
+

@@ -1,0 +1,48 @@
+USE usuarios; /* Utilizamos la base exportada del diagrama EER */
+
+SELECT * FROM users; /* Para poder ver la tabla */
+
+/* Añado las columnas a la tabla, porque no estaban contempladas antes */
+ALTER TABLE users
+ADD COLUMN first_name VARCHAR(15) AFTER id;
+ALTER TABLE users
+ADD COLUMN last_name VARCHAR(15) AFTER first_name;
+
+/* Elimino la columna de password */
+ALTER TABLE users
+DROP COLUMN password; 
+
+/* Inserto los valores correspondientes */
+INSERT INTO users (id, first_name, last_name, email, created_at, updated_at)
+VALUES(1, 'Rosa', 'Gomez', 'rosa18@gmail.com',"2022-01-26", "2022-01-26"),
+      (2, 'Juan', 'Pérez', 'juan19@gmail.com', "2022-01-26", "2022-01-26"),
+      (3, 'Pancho', 'Filomeno','pancho17@gmail.com',"2022-01-26", "2022-01-26");
+
+/* Primer usuario */   
+SELECT *
+FROM users
+LIMIT 1; 
+
+/* Último usuario */   
+SELECT *
+FROM users
+WHERE id = 3;
+
+/* Cambio el apellido del ID 3 */
+UPDATE users SET last_name = 'Panqueques' WHERE id = 3; 
+SELECT last_name FROM users; 
+
+/* Elimino el ID 2 */
+DELETE FROM users
+WHERE id = 2; 
+SELECT * FROM estudiantes; 
+
+/* Ordenar por nombres */
+SELECT *
+FROM users
+ORDER BY first_name;
+
+/* Ordenar por nombres en forma descendente */
+SELECT *
+FROM users
+ORDER BY first_name DESC;

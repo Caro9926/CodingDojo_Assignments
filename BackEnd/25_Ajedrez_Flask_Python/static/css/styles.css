@@ -1,0 +1,15 @@
+
+.chess-board { 
+    border-spacing: 0; 
+    border-collapse: collapse; 
+}
+
+
+
+.chess-board .td { 
+    background: #000; 
+    border: 1px#eee;
+    width: 100px;
+    height: 100px;
+}
+  

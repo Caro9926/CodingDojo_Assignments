@@ -1,0 +1,66 @@
+
+SELECT * FROM cities; /* Para poder ver la tabla */
+
+1)
+/* Todos los países que hablan esloveno */
+SELECT languages.language as slovene_language, name, percentage
+FROM countries
+LEFT JOIN languages
+ON countries.id = languages.country_id
+WHERE language = "Slovene"
+ORDER BY percentage DESC;
+
+2)
+/*Número total de ciudades */
+SELECT countries.name as name, COUNT(cities.name) as cities, languages.language
+FROM countries
+LEFT JOIN cities ON countries.id = cities.country_id
+LEFT JOIN languages on countries.id = languages.country_id
+GROUP BY countries.name
+ORDER BY cities DESC;
+
+3)
+/*Ciudades de México con población > 500000 */
+
+SELECT cities.name, cities.population, country_id
+FROM countries
+LEFT JOIN cities
+ON countries.id = cities.country_id
+WHERE countries.name = "Mexico" AND cities.population > 500000
+ORDER BY cities.population DESC; 
+
+4)
+/*todos los idiomas en cada país con un porcentaje de habla mayor a 89% */
+SELECT countries.name, languages.language, languages.percentage, country_id
+FROM countries
+LEFT JOIN languages
+ON countries.id = languages.country_id
+WHERE languages.percentage > 0.89
+ORDER BY languages.percentage DESC;
+
+5) 
+/*Todos los países con un área de superficie menor a 501 y población mayor a 100,000 */
+SELECT name, surface_area, population
+FROM countries
+WHERE surface_area < 501 AND population > 100000; 
+
+6)
+/*Obtener países solo con monarquía constitucional, un capital superior a 200 y una esperanza de vida mayor a 75 años */
+SELECT name, government_form, capital, life_expectancy
+FROM countries
+WHERE government_form ="Constitutional Monarchy" AND capital > 200 AND life_expectancy >75; 
+
+7)
+/*Obtener todas las ciudades de Argentina dentro del distrito de Buenos Aires con una población mayor a 500,000 habitantes */
+SELECT countries.name, cities.name,  cities.district, cities.population
+FROM countries
+LEFT JOIN cities
+ON countries.id = cities.country_id
+WHERE countries.name = "ARGENTINA" AND cities.district="Buenos Aires" AND cities.population > 500000;
+
+8)
+/* Resumir el número de países en cada región */
+SELECT countries.region, COUNT(countries.name) as countries
+FROM countries
+GROUP BY countries.region
+ORDER BY countries DESC

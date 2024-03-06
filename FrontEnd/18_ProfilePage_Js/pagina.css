@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.encabezado0 {
+    background-color: black;
+}
+
+.nav {
+    width: 1080px;
+    margin: 0 auto;
+    color: white;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+.nav a {
+    color:white;
+    text-decoration: none;
+}
+
+.nav-title {
+    margin-left: 20px;
+}
+
+.btn {
+    border: 3.5px solid black;
+    color: white;
+    background-color: rgba(191, 195, 240, 0.952);
+    padding: 8px 50px 8px 50px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 10px;
+    box-shadow: 5px 5px white;
+}
+
+.contenedor-principal {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.contenedor-dentro{
+    display: flex;
+}
+
+.column1, .column2 {
+    margin: 10px;
+    padding: 10px;
+    flex: 1;
+}
+
+.column2 {
+    flex: 2;
+}
+
+
+.profile, .education {
+    width: 100%;
+    background-color: white;
+    border: 2px solid gray;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+
+.photo {
+    background-color: #10b6cf;
+    height: 130px;
+    margin-bottom: 70px;
+}
+
+.info {
+    padding: 20px 20px 20px 20px;
+}
+
+.info h1, .info h2, .info h3, .info p{
+    margin: 20px 20px 20px 20px;
+}
+
+  
+.icon1 {
+    border-radius: 50%;
+    background-color: #fff;
+    height: 180px;
+    padding: 5px 5px 5px 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.icon2, .icon3 {
+    height: 30px;
+}
+
+a {
+    color: #3a81e6;
+    display: flex;
+    flex-direction: center;
+}
+
+a .icon3{
+    margin-right: 15px;
+}
+
+.education{
+    height: 300px;
+}
+
+.encabezado, .encabezado2, .encabezado3 {
+    background-color:rgb(58, 58, 58);
+    padding: 20px;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.info2{
+    margin-left: 40px;
+    padding: 20px 10px 20px 10px; 
+}
+
+.icon5, .icon6, .icon4, .icon7, .icon8 {
+    border-radius: 50%;
+    height: 50px;
+    margin-right: 5px;
+}
+
+.todd1, .phill1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    margin-bottom: 30px;
+}
+
+.infoa, .accden {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.fechas {
+    font-size: 20px;
+    color: rgb(122, 122, 122);
+}
+
+.solicitudes{
+    margin-top: 50px;
+    height: 250px;
+    background-color: white;
+    border: 2px solid gray;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    padding: 10px 10px 10px 20px;
+
+}
+
+.friends{
+    height: 380px;
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    padding: 10px 10px 10px 20px;
+
+}
+
+.icon8{
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+
+.piepagina {
+    padding: 20px;
+    border-top: 2px solid rgb(163, 162, 162);
+}
+
+.connections {
+    background-color: #eee;
+    color: #333;
+    font-size: 20px;
+    border-radius: 12px;
+    height: 24px;
+    padding: 0 10px;
+    margin-right: 10px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Tiempo Dojo</title>
+    <link rel="stylesheet" type="text/css" href="./tiempodojo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+       
+</head>
+    <body>
+        <div class="nav">
+            <h1 class="nav-title">DojoWeather</h1>
+            <h3 class="nav-links" onclick="charge()">
+                 Burbank
+                 Chicago
+                 Dallas
+            </h3>
+        </div>
+        <div class="encabezado">
+            <h2> San Jose</h2>
+            <div class="encabezado1">
+                <label for="Pais">
+                    show temperature in:  
+                </label>
+                    <select id="temperatura" name="temperatura">
+                    <option value="Centigrados">
+                        C°
+                    </option>
+                    <option value="Farenheit">
+                        F°
+                    </option>
+                    </select>
+            </div>
+        </div>
+
+        <div class="tiempo">
+            <div class="t1">
+                <h4>Today</h4>
+                <img class="met" src="./assets/some_rain.png" src="Icono de algo de lluvia"/> 
+                <p> some rain</p>
+                <div class=temperature>
+                    <p class="tmp1">24°</p> 
+                   <p class="tmp2">18°</p> 
+                </div>
+            </div>
+            <div class="t2">
+                <h4>Tomorrow</h4>
+                <img class="met" src="./assets/some_sun.png" alt="Icono de sol"/> 
+                <p> some sun</p>
+                <div class=temperature>
+                    <p class="tmp1">27°</p> 
+                   <p class="tmp2">19°</p> 
+                </div>
+            </div>
+            <div class="t3">
+                <h4>Friday</h4>
+                <img class="met" src="./assets/some_clouds.png" alt="Icono de nube"/> 
+                <p> some clouds</p>
+                <div class=temperature>
+                   <p class="tmp1">21°</p> 
+                   <p class="tmp2">16°</p> 
+                </div>
+            </div>
+            <div class="t4">
+                <h4>Saturday</h4>
+                <img class="met" src="./assets/some_sun.png" alt="Icono de sol"/> 
+                <p> some sun</p>
+                <div class=temperature>
+                   <p class="tmp1">26°</p> 
+                   <p class="tmp2">21°</p> 
+                </div>
+            </div>
+        </div>
+            <div class="cookie">
+                <img class="cookies" src="./assets/cookie.png" alt="Icono de cookie"/>
+                    <div class="textcookie" >
+                        <h4>Stop! Cookie time</h4>
+                        <p> We use cookies(sadly not the edible ones) to personalize
+                         contents and ads, to provide social media features and to
+                         analyse our traffic. <a href="#">Read more...</a>
+                        </p>
+                    </div>
+                <button class="btn" onclick="accept()">I accept</button>
+                      
+            </div>
+            <script src="td.js"></script>
+    
+    </body>
+</html>

@@ -1,0 +1,14 @@
+
+USE universidad; --Utilizamos la base de datos de Coding Dojo--
+SELECT * FROM estudiantes; --Para poder observar la tabla--
+INSERT INTO estudiantes (id, nombre, apellido) --Añadimos en las columnas correspondientes los valores--
+VALUES(1, 'Rosa', 'Gomez'), 
+      (2, 'Juan', 'Pérez'),
+      (3, 'Pancho', 'Filomeno'),
+      (4, 'María', 'Miranda'); 
+SELECT * FROM estudiantes; 
+UPDATE estudiantes SET nombre = 'Francisco' WHERE id = 3; --Actualizamos el nombre del id 3 --
+SELECT nombre FROM estudiantes; --Si solo deseamos observar la columna del nombre--
+DELETE FROM estudiantes --Borramos un ID--
+WHERE id = 2; 
+SELECT * FROM estudiantes; 

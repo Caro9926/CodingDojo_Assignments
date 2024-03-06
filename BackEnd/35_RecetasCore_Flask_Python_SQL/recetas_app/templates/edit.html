@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit recipe</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <a href="/dashboard" class="btn btn-info">Dashboard</a>  <!--Dashboard return action-->
+    <a href="/logout" class="btn btn-info">Logout</a>  <!--Logout action-->
+    <h1 class="text-center">Edit recipe</h1>
+
+    
+    <form action="/actualizar/receta" method="post">
+        <input type="hidden" name="id" value="{{edit.id}}">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" name="name" class="form-control" value="{{edit.name}}">
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <input type="text" name="description" class="form-control" value="{{edit.description}}">
+        </div>
+        <div class="form-group">
+            <label for="ingredients">Instructions:</label>
+            <input type="text" name="ingredients" class="form-control" value="{{edit.ingredients}}">
+        </div>
+        <div>
+            <label>Date Mode On: </label>  <!--Modificar-->
+            <input type="date" name="created_at" placeholder="Register your date, please" >
+        </div>
+        <div>
+            <p>Under 30 minutes: </p>
+        
+            <label for="yes">
+                Yes
+            </label>
+            <input type="radio" name="time" value="1"/>
+            <label for="no">
+                No
+            </label>
+            <input type="radio" name="time" value="0"/>                         
+        </div>
+        <input type="submit" value="Update" class="btn btn-primary">
+        
+    </form>
+    
+    
+</body>
+</html>

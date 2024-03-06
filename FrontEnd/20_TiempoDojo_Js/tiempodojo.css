@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: white;
+    font-family: 'Balsamiq Sans', cursive;
+    
+
+}
+
+.nav{
+    background-color: rgb(64, 229, 235);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    justify-content: space-around;
+    
+    
+}
+
+.nav-title{
+    color:white;
+    display: flex;
+    align-items: left;
+    justify-content: flex-start;
+    font-size: 3rem;
+}
+h
+.nav-links{
+    color:white;
+    display:flex;
+    flex-direction: right;
+    margin-right: 60px;
+    word-spacing: 30px;
+
+}
+
+.encabezado{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 250px 20px 210px;
+    justify-content: space-between;
+    gap: 50px; 
+    align-items: center;
+    
+}
+
+.encabezado h2{
+    font-size: 2.2rem;
+}
+
+.encabezado1{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    
+}
+select{
+    widows: 25px;
+    height: 20px;
+}
+
+.tiempo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0px 250px 0px 210px;
+    border-top: 3px solid black;
+    align-items: center;
+    
+}
+
+.t1, .t2, .t3, .t4{
+    width: 150px;
+    height: 300px;
+    display: flex;
+    margin: 0px 20px 1px 20px; 
+    padding:20px; 
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top:20px; 
+    background-color: rgb(225, 227, 231);
+    justify-content: space-around;
+
+}
+
+.tiempo h4{
+    font-size: 1.5rem;
+}
+
+.met{
+    height: 150px;
+    border-radius: 50%;
+}
+.temperature{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+    text-decoration: bold;
+    color: blue;
+}
+
+.tmp1{
+    color: red;
+    margin-left: 20px;
+    margin-right: 80px;
+    font-weight: 500px;
+}
+
+.cookie{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(225, 227, 231);
+    border: 3px solid black;
+    margin: 30px 250px 20px 210px;
+    padding: 10px;
+    justify-content: center;
+    position: fixed;
+}
+.cookies{
+    margin-right: 15px;
+    
+}
+
+.btn{
+    height: 50px;
+    width: 130px;
+    border: 3.5px solid black;
+    color: black;
+    font-family: 'Balsamiq Sans', cursive;
+    background-color: rgba(170, 176, 240, 0.952);
+    padding: 10px; 
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 20px;
+    margin-left: 20px;
+    box-shadow: 10px 5px 5px black;
+    cursor: pointer;
+}

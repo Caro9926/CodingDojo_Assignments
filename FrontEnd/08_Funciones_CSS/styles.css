@@ -1,0 +1,25 @@
+
+h1{
+    color:white;
+    background-color: black;
+    text-align: left;
+    font-family: 'Balsamiq Sans', cursive;
+        }
+.cloud-text{
+    color: skyblue;
+
+}
+h2{
+    font-style: italic;
+    color:white;
+    background-color: purple;
+    text-align: center;
+    font-family: 'Balsamiq Sans', cursive;
+}
+h3{
+    text-decoration: underline purple;
+    background-color: skyblue;
+    color: rgb(128, 33, 128);
+    text-align: right;
+    font-family: 'Balsamiq Sans', cursive;
+}

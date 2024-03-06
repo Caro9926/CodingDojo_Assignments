@@ -1,0 +1,47 @@
+USE esquema_dojos_nijas; /* Utilizamos la base exportada del diagrama EER */
+
+SELECT * FROM ninjas; /* Para poder ver la tabla de ninjas*/
+
+/* Agrega tres dojos */
+INSERT INTO dojos (id, name, created_at, updated_at)
+VALUES(1, 'KUM', "2022-01-26", "2022-01-26"),
+      (2, 'SOUL', "2022-01-26", "2022-01-26"),
+      (3, 'KIME',"2022-01-26", "2022-01-26");
+
+/*Elimina los 3 dojos que acabas de crear */
+SET SQL_SAFE_UPDATES = 0; 
+DELETE FROM dojo
+SELECT * FROM dojos; 
+
+/* Agrega tres dojos nuevos */
+INSERT INTO dojos (id, name, created_at, updated_at)
+VALUES(1, 'KUMI', "2022-01-26", "2022-01-26"),
+      (2, 'PANN', "2022-01-26", "2022-01-26"),
+      (3, 'KIM',"2022-01-26", "2022-01-26");
+
+/* Agrega tres ninjas en cada dojo */
+INSERT INTO ninjas (id, first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES(1, 'Leidy','Gongora',23, "2022-01-26", "2022-01-26",1),
+      (2, 'Rosa', 'Miranda',24,"2022-01-26", "2022-01-26",1),
+      (3, 'Carolina','Saavedra',22,"2022-01-26", "2022-01-26",1),
+      (4, 'Nicole','Hidalgo',25,"2022-01-26", "2022-01-26",2),
+      (5, 'Emma','Montero',22,"2022-01-26", "2022-01-26",2),
+      (6, 'Kelly','Lopez',26,"2022-01-26", "2022-01-26",2),
+      (7, 'Alex','Perez',26,"2022-01-26", "2022-01-26",3),
+      (8, 'Jose','Gomez',24,"2022-01-26", "2022-01-26",3),
+      (9, 'Franklin','Del Aguila',22,"2022-01-26", "2022-01-26",3);
+
+/* Recupera todos los ninjas del primer y último dojo */
+SELECT * FROM ninjas
+WHERE dojo_id = 1; 
+
+SELECT * FROM ninjas
+WHERE dojo_id = 3; 
+
+/* Recupera el dojo del último ninja */
+SELECT dojo_id FROM ninjas
+WHERE id =9; 
+
+SELECT *
+FROM ninjas, dojos
+WHERE ninjas.dojo_id = dojos.id AND id = 9; 

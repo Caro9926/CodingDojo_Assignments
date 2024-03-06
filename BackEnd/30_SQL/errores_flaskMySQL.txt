@@ -1,0 +1,21 @@
+Dentro del archivo SQL
+Primer error: Data too long, porque especifiqué un VARCHAR(45) y la ocupación supera ello
+
+INSERT INTO my_first_flask.friends (first_name, last_name, occupation)
+VALUES ("Adrien", "Dior", "Jianaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"),
+
+Segundo error: You have an erro in your SQL. Escribo Adrien como un int u otra variable cuando es una string
+
+INSERT INTO my_first_flask.friends (first_name, last_name, occupation)
+VALUES (Adrien, "Dior", "Jianaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"),
+
+Tercer error: Don't exist frinds table, especificar de forma incorrecta la tabla de friends
+
+INSERT INTO my_first_flask.frinds (first_name, last_name, occupation)
+VALUES ("Adrien", "Dior", "Jianaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"),
+
+
+Dentro del archivo py:
+1)self.first_name = data[first_name] --> Especificar que es una variable string
+2)results = connectToMySQL('first_flask').query_db(query) --> Mi archivo se llama my_first_flask
+3) password = 'root' ---> No cambiar  la contraseña 

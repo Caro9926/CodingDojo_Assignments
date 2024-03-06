@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Formulario</title>   
+        <meta charset="UTF-8" />
+        <body>
+            <h1>
+                Registration form
+            </h1>
+           
+            <form action="/process" method="post">
+            <div>
+                <label>First name*: </label>
+                <input type="text" name="name" requiered>
+            </div>
+            <div>
+                <label>Last Name*: </label>
+                <input type="text" name="lastname" requiered>
+            </div>
+            <div>
+                <label>Email Adress*: </label>
+                <input type="text" name="email" required>
+            </div>
+            <div>
+                <label>Password*: </label>
+                <input type="password" name="password" required>
+            </div>
+            <div>
+                <label>Confirm Password*: </label>
+                <input type="password" name="confirmpassword" required>
+            </div>
+            <div>
+                <label>Birthday: </label>
+                <input type="date" name="Birthday" 
+                placeholder="Write your Birthday..." >
+            </div>
+            <div>
+                <p>Gender identity: </p>
+                
+                <label for="genderMale">
+                    Male
+                </label>
+                <input type="radio" name="gender" value="Male" id="genderMale" />
+                <label for="genderFemale">
+                    Female
+                </label>
+                <input type="radio" name="gender" value="Female" id="genderFemale" />
+                <label for="gendernonbinary">
+                    Non-Binary
+                </label>
+                <input type="radio" name="gender" value="Non-Binary" id="gendernonbinary" />
+               </label>
+                <label for="gendernone">
+                    I prefer not to answer
+                </label>
+                 <input type="radio" name="gender" value="I prefer not to answer" id="gendernone" />
+                                    
+            </div>
+            <div>
+                <p> A short description about myself:</p>
+                <textarea name="comment" cols="20" rows="3"></textarea>
+            </div>
+
+                <p> Favorite languaje:
+                <select name="program">
+                <option>JavaScript</option>
+                <option>Python</option>
+                <option>CSS</option>
+                </select>
+            </p> 
+            <div>
+                <input type="checkbox" name="offers" 
+                id="offers" checked >
+                <label for="offers">Yes, I would like to receive periodic email updates</label>
+            </div>
+            <div>
+                <input type="submit" value="Create account" >
+            </div>
+            
+            <p>* Indicates a requiered field </p>
+        </form>
+    </body>
+  </head>
+</html>
